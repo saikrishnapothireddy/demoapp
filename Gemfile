@@ -54,14 +54,15 @@ gem "bootsnap", require: false
 
 # Use Sass to process CSS
 gem "sassc-rails"
-
+gem 'browser', '~> 5.3', '>= 5.3.1'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem "image_processing", "~> 1.2"
 
 group :assets do
-  gem 'therubyracer'
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
+  # gem 'libv8', '~> 3.16', '>= 3.16.14.15'
+  # gem 'therubyracer', '~> 0.12.3'
+  gem 'sass-rails', '~> 6.0'
+  gem 'coffee-rails', '~> 5.0'
   gem 'uglifier', '~> 4.2'
 end
 
