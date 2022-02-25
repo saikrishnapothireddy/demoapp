@@ -19,6 +19,11 @@ gem 'bootstrap-will_paginate', '~> 1.0'
 gem 'will_paginate', '~> 3.3', '>= 3.3.1'
 gem 'faker', '~> 2.19'
 gem 'dotenv', '~> 2.7', '>= 2.7.6'
+gem 'carrierwave', '~> 2.2', '>= 2.2.2'
+gem 'mini_magick', '~> 4.11'
+# gem 'fog', '~> 2.2'
+# gem 'fog-ovirt', '~> 2.0', '>= 2.0.1'
+# gem 'ovirt-engine-sdk', '~> 4.4', '>= 4.4.1'
 # Use sqlite3 as the database for Active Record
 # gem "sqlite3", "~> 1.4"
 

@@ -1,0 +1,13 @@
+current directory: C:/Users/user/Desktop/demoapp/thout-opt-dir/gems/json-2.6.1/ext/json
+C:/Ruby30-x64/bin/ruby.exe -I C:/Ruby30-x64/lib/ruby/site_ruby/3.0.0 -r ./siteconf20220225-9344-mhatv9.rb extconf.rb
+creating Makefile
+
+current directory: C:/Users/user/Desktop/demoapp/thout-opt-dir/gems/json-2.6.1/ext/json
+make DESTDIR\= clean
+
+current directory: C:/Users/user/Desktop/demoapp/thout-opt-dir/gems/json-2.6.1/ext/json
+make DESTDIR\=
+make: Nothing to be done for 'all'.
+
+current directory: C:/Users/user/Desktop/demoapp/thout-opt-dir/gems/json-2.6.1/ext/json
+make DESTDIR\= install
