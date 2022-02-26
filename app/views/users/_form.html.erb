@@ -19,7 +19,8 @@
       <%= f.label :password_confirmation, "Confirmation" %>
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       <h1></h1>
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.submit "Create my account", class: "btn btn-primary" %><h1></h1>
+      <h5><strong>Already a user?</strong> <%= link_to "Log in", login_path %> </h5>
     <% end %>
   </div>
 </div>
