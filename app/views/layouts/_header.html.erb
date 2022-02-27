@@ -62,7 +62,7 @@
                     <%= link_to "Log out", logout_path, method: :delete %>
                   </li>
                   <li>
-              <% if !session[:culprit].blank? %>
+              <% if !session[:culprit].blank? && !(session[:culprit] == current_user.id) %>
               <%= link_to "Original user", original_user_user_path(session[:culprit]) %>
               <% end %>
             </li>
