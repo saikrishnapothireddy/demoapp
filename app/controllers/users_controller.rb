@@ -77,6 +77,12 @@ class UsersController < ApplicationController
     render 'show_follow'
   end
 
+  def switch_user
+    user = User.find(params[:id])
+    log_in(user)
+    redirect_to users_url
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
