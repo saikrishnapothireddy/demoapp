@@ -19,6 +19,11 @@
               <li>
                 <%= link_to "Log out", logout_path, method: :delete %>
               </li>
+              <li>
+              <% if !session[:culprit].blank? %>
+              <%= link_to "Original user", original_user_user_path(session[:culprit]) %>
+              <% end %>
+            </li>
             </ul>
           </li>
         <% else %>

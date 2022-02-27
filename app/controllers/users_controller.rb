@@ -78,11 +78,27 @@ class UsersController < ApplicationController
   end
 
   def switch_user
+    session[:culprit] = current_user.id if session[:culprit].blank? || session[:culprit] == current_user
     user = User.find(params[:id])
     log_in(user)
     redirect_to users_url
   end
 
+  def original_user
+    user = User.where(id: session[:culprit]).first
+    log_in(user)
+    redirect_to users_url
+  end
+
+  def make_admin
+    user = User.where(id: params[:id]).first
+    if !user.admin?
+      user.update_attribute(:admin, true)
+    else
+      user.update_attribute(:admin, false)
+    end
+    redirect_to users_url
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

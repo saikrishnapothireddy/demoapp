@@ -5,7 +5,8 @@
         <%= gravatar_for user %>
         <%= user.name %>
         <% if current_user.admin? && !current_user?(user) %>
-        <%= link_to "(#{user.id})", switch_user_user_path(user) %> <h1></h1><br>
+        <%= link_to "(#{user.id})", switch_user_user_path(user) %><h5>
+        <%= link_to "Make/Remove admin", make_admin_user_path(user.id) %></h5><h1></h1><br>
         <%= button_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
         <% end %>
       </h1>

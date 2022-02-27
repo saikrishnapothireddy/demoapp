@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   resources :users do
     member do
-      get :following, :followers, :switch_user
+      get :following, :followers, :switch_user, :original_user, :make_admin
     end
   end
   resources :users
