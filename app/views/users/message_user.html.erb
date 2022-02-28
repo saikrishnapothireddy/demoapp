@@ -1,0 +1,12 @@
+<% provide(:title, "Chat") %>
+<div class="row">
+    <aside class="col-md-4">      
+      <section class="micropost_form">
+        <%= render 'shared/message_form' %>
+      </section>
+    </aside>
+    <div class="col-md-8">
+      <h3>Messages Feed</h3>
+      <%= render 'shared/message_feed' %>
+    </div>
+  </div>

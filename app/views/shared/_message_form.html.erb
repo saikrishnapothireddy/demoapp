@@ -1,0 +1,9 @@
+<%= form_for(@chat, html: { multipart: true }) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <%= f.label :message %>
+  <div class="field">
+    <%= f.text_area :content, placeholder: "Compose new micropost..." %>
+  </div>
+  <%= f.hidden_field :receiver_id %>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
