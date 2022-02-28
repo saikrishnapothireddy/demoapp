@@ -102,7 +102,7 @@ class UsersController < ApplicationController
 
   def message_user
     @chat = current_user.messages.build
-    @message_feed = (Message.all.where(user_id: [current_user.id, params[:id]], receiver_id: [current_user.id, params[:id]]))
+    @message_feed = (Message.all.where(user_id: [current_user.id, params[:id]], receiver_id: [current_user.id, params[:id]])).paginate(page: params[:page])
     @chat.receiver_id = params[:id]
   end
   private
