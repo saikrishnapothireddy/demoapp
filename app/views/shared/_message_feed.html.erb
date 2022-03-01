@@ -1,17 +1,16 @@
 <% if @message_feed.any? %>
-<div class="container">
   <ol class="messages">
     <% @message_feed.each do |message| %>
     <% if !current_user?(message.user_id) %>
     <div class="container-fluid">
-    <span><%= gravatar_for User.find(message.user_id) %></span>
+    <span style="float: left;"><%= gravatar_for User.find(message.user_id) %></span>
     <span class="content"><%= message.content %></span>
-    <span class="time-lef">
+    <span class="time-left">
       Posted <%= time_ago_in_words(message.created_at) %> ago.
     </span></div><br>
     <% else %>
     <div class="container-fluid">
-    <span><%= gravatar_for User.find(message.receiver_id) %></span>
+    <span style="float: right;"><%= gravatar_for User.find(message.receiver_id) %></span>
     <span class="content"><%= message.content %></span>
     <span class="time-right">
       Posted <%= time_ago_in_words(message.created_at) %> ago.
@@ -20,5 +19,4 @@
     <% end %>
     <%= will_paginate @message_feed %>
   </ol>
-</div>
 <% end %>

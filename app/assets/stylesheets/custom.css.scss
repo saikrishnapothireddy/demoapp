@@ -284,14 +284,16 @@ input {
     }
   }
 
-  .time-right {
-    float: right;
-    color: #aaa;
-  }
+  .container-fluid {
+    .time-right {
+      float: right;
+      color: #aaa;
+    }
 
-  .time-left {
-    float: left;
-    color: #999;
+    .time-left {
+      float: left;
+      color: #999;
+    }
   }
 }
 aside {
