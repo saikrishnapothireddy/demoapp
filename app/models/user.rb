@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  include ImageProcessing::MiniMagick
+  has_one_attached :avatar do |a|
+    a.variant :thumb, resize_to_limit: [50,50]
+  end
   has_many :messages
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",

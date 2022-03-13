@@ -26,7 +26,7 @@ gem 'fog-aws', '~> 3.13'
 # gem 'fog-ovirt', '~> 2.0', '>= 2.0.1'
 # gem 'ovirt-engine-sdk', '~> 4.4', '>= 4.4.1'
 # Use sqlite3 as the database for Active Record
-# gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
