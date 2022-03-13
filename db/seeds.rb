@@ -1,19 +1,19 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
-# User.create!(name:  "Sai Krishna",
-#              email: "saikrishnapothireddy@gmail.com",
-#              password:              "pass@123",
-#              password_confirmation: "pass@123",
-#              admin: true,
-#              activated: true,
-#              activated_at: Time.zone.now,
-#              reset_digest: "asdfghjkl",
-#              reset_sent_at: Time.zone.now)
+# # This file should contain all the record creation needed to seed the database with its default values.
+# # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+# #
+# # Examples:
+
+# #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
+# #   Character.create(name: "Luke", movie: movies.first)
+# # User.create!(name:  "Sai Krishna",
+# #              email: "saiswarnapothireddy@gmail.com",
+# #              password:              "pass@123",
+# #              password_confirmation: "pass@123",
+# #              admin: true,
+# #              activated: true,
+# #              activated_at: Time.zone.now,
+# #              reset_digest: "asdfghjkl",
+# #              reset_sent_at: Time.zone.now)
 
 # 99.times do |n|
 #   name  = Faker::Name.name
@@ -25,7 +25,7 @@
 #                password_confirmation: password,
 # 	           activated: true,
 # 	           activated_at: Time.zone.now,
-#              reset_diges: "asdfghjkl",
+#              reset_digest: "asdfghjkl",
 #              reset_sent_at: Time.zone.now)
 # end
 
@@ -35,10 +35,10 @@
 #   users.each { |user| user.microposts.create!(content: content, picture: nil) }
 # end
 
-# Following relationships
-users = User.all
-user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+# # Following relationships
+# users = User.all
+# user  = users.first
+# following = users[2..50]
+# followers = users[3..40]
+# following.each { |followed| user.follow(followed) }
+# followers.each { |follower| follower.follow(user) }
