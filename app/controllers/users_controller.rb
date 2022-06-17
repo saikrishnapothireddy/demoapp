@@ -100,6 +100,11 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def media_file_upload
+    @media = current_user.mediums.build
+    render 'media/new'
+  end
+
   def message_user
     @chat = current_user.messages.build
     @message_feed = (Message.all.where(user_id: [current_user.id, params[:id]], receiver_id: [current_user.id, params[:id]])).paginate(page: params[:page], per_page: 5)

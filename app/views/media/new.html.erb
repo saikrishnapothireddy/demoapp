@@ -1,0 +1,8 @@
+<h1>Media#create</h1>
+<p>Find me in app/views/media/create.html.erb</p>
+<%= form_for(@media) do |f| %>
+	<%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+	<%= f.file_field :avatar %>
+	<%= f.submit "Upload Media", class: "btn btn-primary" %>
+<%end%>

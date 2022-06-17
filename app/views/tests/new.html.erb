@@ -1,0 +1,6 @@
+<%= form_for(@sai) do |f| %>
+	<%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+	<%= f.file_field :image %>
+	<%= f.submit "Upload Media", class: "btn btn-primary" %>
+<%end%>

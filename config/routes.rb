@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'media' => 'media#new'
+  post 'media' => 'media#create'
   root             'static_pages#home'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
@@ -8,7 +10,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   resources :users do
     member do
-      get :following, :followers, :switch_user, :original_user, :make_admin, :message_user
+      get :following, :followers, :switch_user,:media_file_upload, :original_user, :make_admin, :message_user
     end
   end
   resources :users
@@ -17,6 +19,7 @@ Rails.application.routes.draw do
   resources :microposts,          only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
   resources :messages,          only: [:create, :destroy]
+  resources :tests
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

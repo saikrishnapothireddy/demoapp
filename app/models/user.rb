@@ -4,6 +4,7 @@ class User < ApplicationRecord
     a.variant :thumb, resize_to_limit: [50,50]
   end
   has_many :messages
+  has_many :mediums
   has_many :microposts, dependent: :destroy
   has_many :active_relationships, class_name:  "Relationship",
                                   foreign_key: "follower_id",
