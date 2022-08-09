@@ -3,16 +3,20 @@
     <section class="user_info">
       <h1>
         <%= user.avatar.variant(:thumb) %>
-        <%= link_to "#{user.name}", users_path(user) %> |
+        <%= link_to "#{user.name}", user_path(user) %> |
         <% if !current_user?(user) %>
         <%= link_to "Chat", message_user_user_path(user) %>
         <% end %>
         <% if current_user.admin? && !current_user?(user) %>
         <%= link_to "(#{user.id})", switch_user_user_path(user) %><h5>
         <%= link_to "Make/Remove admin", make_admin_user_path(user.id) %></h5><h1></h1>
-        <%= button_to "delete", user, method: :delete, data: { confirm: "You sure?" } %>
+        <button id ="sai">delete</button>
         <% end %>
       </h1>
     </section>
   </aside>
 </div>
+<script type="text/javascript">
+    if (window.confirm("are you sure?")) {
+      $("#id").html("<%= link_to "", user,method: :delete %>")
+    }</script>
