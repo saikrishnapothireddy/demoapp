@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   resources :users do
     member do
-      get :following, :followers, :switch_user,:media_file_upload, :original_user, :make_admin, :message_user
+      get :media_view, :following, :followers, :switch_user,:media_file_upload, :original_user, :make_admin, :message_user
     end
   end
   resources :users

@@ -5,17 +5,22 @@
       <h1>
         <%= gravatar_for @user %>
         <%= @user.name %>
-        <%= link_to 'MediaUpload', media_file_upload_user_path(@user) %>
       </h1>
     </section>
     <section class="stats">
       <%= render 'shared/stats' %>
-    </section>
-    <section>
-      <% Medium.all.where(user_id: @user.id).each do |a| %>
-      <%= image_tag a.avatar %><h1></h1>
-      <%end%>
-    </section>
+    </section><br>
+    <div class="row">
+    <div class="col-md-6 mb-4">    
+        <ul class="list-group">
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-laptop mr-4 pr-3"></i><%= link_to 'MediaUpload', media_file_upload_user_path(@user) %>
+            </li>
+            <li class="list-group-item">
+              <div class="md-v-line"></div><i class="fas fa-bomb mr-5"></i><%= link_to 'Media Directory', media_view_user_path(current_user) %>
+            </li>            
+        </ul>    
+    </div>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>

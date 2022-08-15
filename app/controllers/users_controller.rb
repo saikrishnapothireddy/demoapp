@@ -110,6 +110,9 @@ class UsersController < ApplicationController
     @message_feed = (Message.all.where(user_id: [current_user.id, params[:id]], receiver_id: [current_user.id, params[:id]])).paginate(page: params[:page], per_page: 5)
     @chat.receiver_id = params[:id]
   end
+
+  def media_view
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
